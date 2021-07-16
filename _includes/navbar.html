@@ -19,7 +19,10 @@
       </button>
 
       {% comment %} Select what logo to display. {% endcomment %}
-      {% if info.carpentry == "swc" %}
+      <a href="{{ site.esc_site }}" class="pull-left">
+        <img class="navbar-logo" src="{{ relative_root_path }}{% link /assets/img/netherlands-escience-center-logo-RGB.svg %}" alt="The Netherlands eScience Center logo" />
+      </a>
+      {% if site.carpentry == "swc" %}
       <a href="{{ site.swc_site }}" class="pull-left">
         <img class="navbar-logo" src="{{ relative_root_path }}{% link /assets/img/swc-icon-blue.svg %}" alt="Software Carpentry logo" />
       </a>
@@ -38,6 +41,10 @@
       {% elsif info.carpentry == "pilot" %}
       <a href="{{ site.lesson_site }}" class="pull-left">
         <img class="navbar-logo" src="{{ relative_root_path }}{% link /assets/img/incubator-logo-blue.svg %}" alt="The Carpentries Incubator logo" />
+      </a>
+      {% elsif site.carpentry == "cr" %}
+      <a href="{{ site.workshop_site }}" class="pull-left">
+        <img class="navbar-logo" src="{{ relative_root_path }}{% link /assets/img/code_refinery_logo.png %}" alt="The Code Refinery logo" />
       </a>
       {% endif %}
 
